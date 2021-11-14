@@ -14,7 +14,7 @@ For Windows: `source /env/Scripts/activate`
 `pip install -r requirements.txt`  
 
 - Load Seed Data  
-app/ has a `fixtures` directory which can be used to pre-populated the database  
+app/ has a `fixtures` directory which can be used to pre-populate the database  
 Database can be populated with:  
 `python manage.py loaddata selection/app/fixtures/fixtures.json`
 
