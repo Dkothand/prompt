@@ -14,7 +14,7 @@ For Windows: `source /env/Scripts/activate`
 `pip install -r requirements.txt`  
 
 - Run the Server  
-`python manage.py runserver`
+`cd selection && python manage.py runserver`
 
 
 ## Relevant Code
