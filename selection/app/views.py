@@ -51,6 +51,7 @@ def provider_list(request):
         
         limit = request.GET.get('limit')
         if limit is not None:
+            limit = int(limit)
             providers = providers[:limit]
  
         serialize = ProviderSerializer(providers, many=True)
