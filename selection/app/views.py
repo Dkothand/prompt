@@ -49,9 +49,9 @@ def provider_list(request):
         else:
             providers = providers.order_by('fees', 'minimum_balance', '-ease_of_use')
         
-        top_three = request.GET.get('top_three')
-        if top_three is not None and parse_bool_param(top_three):
-            providers = providers[:3]
+        limit = request.GET.get('limit')
+        if limit is not None:
+            providers = providers[:limit]
  
         serialize = ProviderSerializer(providers, many=True)
         return JsonResponse(serialize.data, safe=False)
