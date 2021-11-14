@@ -13,6 +13,11 @@ Requires: Python3 (Developed with Python3.10)
 For Windows: `source /env/Scripts/activate`  
 `pip install -r requirements.txt`  
 
+- Load Seed Data  
+app/ has a `fixtures` directory which can be used to pre-populated the database  
+Database can be populated with:  
+`python manage.py loaddata selection/app/fixtures/fixtures.json`
+
 - Run the Server  
 `cd selection && python manage.py runserver`
 
