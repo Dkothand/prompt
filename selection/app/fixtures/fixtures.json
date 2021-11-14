@@ -1,0 +1,122 @@
+[
+    {
+        "model": "app.provider",
+        "pk": 1,
+        "fields": {
+            "name": "Fidelity",
+            "fees": 1000.00,
+            "minimum_balance": 1000.00,
+            "automated": false,
+            "advisor": true,
+            "ease_of_use": 3
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 2,
+        "fields": {
+            "name": "Schwab",
+            "fees": 900.00,
+            "minimum_balance": 2000.00,
+            "automated": true,
+            "advisor": true,
+            "ease_of_use": 2
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 3,
+        "fields": {
+            "name": "Robinhood",
+            "fees": 800.00,
+            "minimum_balance": 3000.00,
+            "automated": false,
+            "advisor": false,
+            "ease_of_use": 5
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 4,
+        "fields": {
+            "name": "Vanguard",
+            "fees": 700.00,
+            "minimum_balance": 4000.00,
+            "automated": true,
+            "advisor": false,
+            "ease_of_use": 1
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 5,
+        "fields": {
+            "name": "TD Ameritrade",
+            "fees": 600.00,
+            "minimum_balance": 5000.00,
+            "automated": false,
+            "advisor": true,
+            "ease_of_use": 4
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 6,
+        "fields": {
+            "name": "E-Trade",
+            "fees": 500.00,
+            "minimum_balance": 6000.00,
+            "automated": true,
+            "advisor": false,
+            "ease_of_use": 4
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 7,
+        "fields": {
+            "name": "Bank of America",
+            "fees": 400.00,
+            "minimum_balance": 7000.00,
+            "automated": false,
+            "advisor": true,
+            "ease_of_use": 1
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 8,
+        "fields": {
+            "name": "Wells Fargo",
+            "fees": 300.00,
+            "minimum_balance": 8000.00,
+            "automated": true,
+            "advisor": false,
+            "ease_of_use": 2
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 9,
+        "fields": {
+            "name": "Chase",
+            "fees": 200.00,
+            "minimum_balance": 9000.00,
+            "automated": false,
+            "advisor": true,
+            "ease_of_use": 5
+        }
+    },
+    {
+        "model": "app.provider",
+        "pk": 10,
+        "fields": {
+            "name": "CitiBank",
+            "fees": 100.00,
+            "minimum_balance": 10000.00,
+            "automated": true,
+            "advisor": false,
+            "ease_of_use": 2
+        }
+    }
+]
