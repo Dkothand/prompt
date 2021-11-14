@@ -19,5 +19,5 @@ For Windows: `source /env/Scripts/activate`
 
 ## Relevant Code
 A majority of the code is boilerplate provided by Django.  
-The logic I have introduced mainly lives in app/models.py and app/views.py.  
+The logic I have introduced mainly lives in selection/app/models.py and selection/app/views.py.  
 These files outline the database table structure, and the GET request logic for the endpoint `/providers`
