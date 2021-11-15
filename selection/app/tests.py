@@ -9,17 +9,24 @@ from app.models import Provider
 
 
 class ProviderTestCase(TestCase):
-    def setUp(self):
-        Provider.objects.create(name="Test Provider")
+    @classmethod
+    def setUpTestData(cls):
+        cls.provider = Provider.objects.create(name="Test Provider")
+
+    def test_fields(self):
+        self.assertIsInstance(self.provider.name, str)
+        self.assertIsInstance(self.provider.fees, float)
+        self.assertIsInstance(self.provider.minimum_balance, float)
+        self.assertIsInstance(self.provider.automated, bool)
+        self.assertIsInstance(self.provider.advisor, bool)
+        self.assertIsInstance(self.provider.ease_of_use, int)
 
     def test_defaults(self):
-        """Providers defaults"""
-        test_provider = Provider.objects.get(name="Test Provider")
-        self.assertEqual(test_provider.fees, 0.0000)
-        self.assertEqual(test_provider.minimum_balance, 0.0000)
-        self.assertEqual(test_provider.automated, False)
-        self.assertEqual(test_provider.advisor, False)
-        self.assertEqual(test_provider.ease_of_use, 3)
+        self.assertEqual(self.provider.fees, 0.0000)
+        self.assertEqual(self.provider.minimum_balance, 0.0000)
+        self.assertEqual(self.provider.automated, False)
+        self.assertEqual(self.provider.advisor, False)
+        self.assertEqual(self.provider.ease_of_use, 3)
 
 class ProvidersEndpointGET(TestCase):
     def setUp(self):
