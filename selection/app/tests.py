@@ -56,3 +56,30 @@ class ProvidersEndpointGET(TestCase):
         response = provider_list(request)
         json_data = json.loads(response.content)
         self.assertEqual(len(json_data), 4)
+
+class ProvidersPriorities(TestCase):
+    def setUp(self):
+        self.base_url = '/api/providers'
+        self.factory = APIRequestFactory()
+        Provider.objects.create(name='1', fees=100, minimum_balance=400)
+        Provider.objects.create(name='2', fees=200, minimum_balance=300)
+        Provider.objects.create(name='3', fees=300, minimum_balance=200)
+        Provider.objects.create(name='4', fees=400, minimum_balance=100)
+ 
+    def test_default_priority(self):
+        request = self.factory.get(self.base_url)
+        response = provider_list(request)
+        json_data = json.loads(response.content)
+        self.assertEqual(json_data[0]['name'], '1')
+        self.assertEqual(json_data[1]['name'], '2')
+        self.assertEqual(json_data[2]['name'], '3')
+        self.assertEqual(json_data[3]['name'], '4')
+    
+    def test_given_priority(self):
+        request = self.factory.get(self.base_url + '?priority=minimum_balance')
+        response = provider_list(request)
+        json_data = json.loads(response.content)
+        self.assertEqual(json_data[0]['name'], '4')
+        self.assertEqual(json_data[1]['name'], '3')
+        self.assertEqual(json_data[2]['name'], '2')
+        self.assertEqual(json_data[3]['name'], '1')
