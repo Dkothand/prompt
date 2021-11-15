@@ -22,6 +22,12 @@ Database can be populated with:
 `cd selection && python manage.py runserver`
 
 
+## Testing
+**From selection/ directory**  
+Run Django test command with `python manage.py test`  
+Tests are located in selection/app/tests.py
+
+
 ## Relevant Code
 A majority of the code is boilerplate provided by Django.  
 The logic I have introduced mainly lives in selection/app/models.py and selection/app/views.py.  
